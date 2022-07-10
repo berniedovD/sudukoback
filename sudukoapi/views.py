@@ -26,11 +26,12 @@ def puzzles(request):
        {"id": "easy1",
         "puzzleString": "060000080031802940000543000046001730009000500078300260000678000014209650090000020"}
     ]
-
+    return Response (puzList)
+@api_view()
 def puzzleDB(request):
     queryset = Puzzle.objects.all()
     serializer = PuzzleSerializer(queryset, many=True)
 
-    return Response('ok')
+    return Response(serializer.data)
 
 

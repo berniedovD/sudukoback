@@ -4,5 +4,5 @@ class PuzzleSerializer(serializers.Serializer):
  puzzleID = serializers.CharField(max_length=4)
  puzzleName = serializers.CharField(max_length=10)
  sudukoString = serializers.CharField(max_length=81)
- difficutltyLevel = serializers.CharField(max_length=1)
+ difficultyLevel = serializers.CharField(max_length=1)
   
