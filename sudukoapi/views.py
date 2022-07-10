@@ -4,6 +4,8 @@ from django.http import HttpResponse
 
 from rest_framework.decorators import api_view
 from rest_framework.response  import Response
+from .models import Puzzle
+from .serializers import PuzzleSerializer
 
 def say_hello(request):
     
@@ -25,7 +27,10 @@ def puzzles(request):
         "puzzleString": "060000080031802940000543000046001730009000500078300260000678000014209650090000020"}
     ]
 
+def puzzleDB(request):
+    queryset = Puzzle.objects.all()
+    serializer = PuzzleSerializer(queryset, many=True)
 
-    return Response(puzList)
+    return Response('ok')
 
 
