@@ -12,12 +12,12 @@ dbcon = sqlite3.connect(db)
 p  = pd.read_sql_query("SELECT * from django_migrations", dbcon)
 
 puzzleTable = [
-    {'puzzleID': 'p4', 
-     'sudukoString': '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890',
+    {'puzzleID': 'p5', 
+     'sudukoString': '010020300004005060070000008006900070000100002030048000500006040000800106008000000',
      'puzzleName': 'puzzle1', 'difficultyLevel': 'E'},
     
-    {'puzzleID': 'p3', 
-     'sudukoString': '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890',
+    {'puzzleID': 'p6', 
+     'sudukoString': '000123000040050060000000000100000003260070081900000002000000000080060040000294000',
      'puzzleName': 'puzzle2', 'difficultyLevel': 'E'},
     
     ]
